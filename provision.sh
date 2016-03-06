@@ -47,6 +47,10 @@ mv composer.phar /usr/local/bin/composer
 cd /vagrant/products
 composer install
 
+#alias
+echo 'alias my="mysql -u root -D products"' >> ~/.bashrc
+source ~/.bashrc
+
 #起動
 sudo service httpd start
 
