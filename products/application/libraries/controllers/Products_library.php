@@ -25,7 +25,7 @@ class Products_library extends Controllers_library
         // POSTパラメータのチェック
         list($result, $data) = $this->validateSearch();
         if(!$result) {
-            return [];
+			return [];
         }
         // ID 一致
         if(isset($data['id'])) {

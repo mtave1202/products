@@ -38,10 +38,13 @@ class Controllers_library
 				}
 			}, $this->CI->form_validation->get_fields());
 			// エラーメッセージを削除
+			set_danger_message('');
 			$result = true;
         } else {
 			// エラーメッセージ設定
-			set_danger_message(validation_errors());
+			if(validation_errors()) {
+				set_danger_message(validation_errors());
+			}
 		}
 		return [$result, $data];
 	}
