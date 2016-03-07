@@ -33,7 +33,8 @@ products/
 ## 実行
 （要Vagrant実行環境）
 
-git clone したディレクトリで vagrant up
+git clone したディレクトリで vagrant up  
+起動完了後、http://192.168.56.10/ へアクセス
 
 ## システム概要
 

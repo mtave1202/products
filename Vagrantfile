@@ -11,6 +11,6 @@ Vagrant.configure(2) do |config|
   end
 
   Encoding.default_external = 'UTF-8'
-  #config.vm.provision "shell", :path => "./provision.sh"
+  config.vm.provision "shell", :path => "./provision.sh"
 end
 

@@ -1,5 +1,6 @@
 #yum更新
-sudo yum -y update
+#更新数が多いのでひとまずコメントアウト
+#sudo yum -y update
 
 ############ install ##########
 sudo rpm -Uvh http://ftp.iij.ad.jp/pub/linux/fedora/epel/6/x86_64/epel-release-6-8.noarch.rpm
@@ -13,7 +14,7 @@ sudo yum install -y --enablerepo=remi --enablerepo=remi-php56 php php-opcache ph
 sudo yum install -y --enablerepo=remi mysql mysql-server mysql-devel mysql-libs
 
 #apache
-sudo yum install httpd
+sudo yum install -y httpd
 
 ############ setting ###########
 ###confファイル生成
@@ -29,8 +30,8 @@ sudo chmod 0777 /etc/httpd/conf.d/virtualhost-products.conf
 sudo cat <<EOF > /etc/httpd/conf.d/virtualhost-products.conf
 <VirtualHost *:80>
     ServerName localhost
-    DocumentRoot "/vagrant/products/"
-    SetEnv CI_ENV localhost
+    DocumentRoot "/vagrant/products/public/"
+    SetEnv CI_ENV development
 </VirtualHost>
 EOF
 sudo chmod 0644 /etc/httpd/conf.d/virtualhost-products.conf
@@ -48,8 +49,8 @@ cd /vagrant/products
 composer install
 
 #alias
-echo 'alias my="mysql -u root -D products"' >> ~/.bashrc
-source ~/.bashrc
+#echo 'alias my="mysql -u root -D products"' >> ~/.bashrc
+#source ~/.bashrc
 
 #起動
 sudo service httpd start
