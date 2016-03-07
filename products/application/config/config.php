@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://192.168.56.10/index.php';
+$config['base_url'] = 'http://' . $_SERVER["HTTP_HOST"] . '/index.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -390,7 +390,7 @@ $config['sess_regenerate_destroy'] = FALSE;
 |       'cookie_httponly') will also affect sessions.
 |
 */
-$config['cookie_domain']	= '192.168.56.10';
+$config['cookie_domain']	= '';
 $config['cookie_secure']	= FALSE;
 $config['cookie_httponly'] 	= TRUE;
 
