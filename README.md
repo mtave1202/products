@@ -38,7 +38,7 @@ git clone したディレクトリで vagrant up
 ## システム概要
 
 ### 画面遷移図
-![画面遷移](https://raw.github.com/wiki/mtave1202/products/img/seni.png)
+![画面遷移](https://github.com/mtave1202/products/blob/master/img/seni.png)
 
 ### 機能一覧
 
